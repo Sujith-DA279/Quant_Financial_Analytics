@@ -52,7 +52,10 @@ The analysis addressed key business needs:
 | Macroeconomic Indicators | Federal Reserve Economic Data (FRED API) | 2000-2024 | GDP, Inflation, Unemployment, Federal Debt, Treasury Yields |
 | News Sentiment | NY Times Articles (Vantage Data) | 2019-2024 | 1,423 articles after cleanup |
 
-![Data Ingestion from Different Opensource APIs](https://github.com/user-attachments/assets/22065cf7-93c4-424f-8bd0-fd7c733a1e73)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/22065cf7-93c4-424f-8bd0-fd7c733a1e73" width="100%"/>
+  <p><em>Data Ingestion from Different Opensource APIs</em></p>
+</div>
 
 #### Feature Engineering
 
@@ -84,8 +87,10 @@ We created 90+ derived features across the following categories:
 - Market reaction to surprises strongest within 2-3 days after announcement
 - Pre-announcement momentum (BOP) shows positive correlation with post-announcement returns
 
-![image](https://github.com/user-attachments/assets/2895f387-580a-4b58-862e-1cfa8cdfe2ac)
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2895f387-580a-4b58-862e-1cfa8cdfe2ac" width="100%"/>
+  <p><em>EPS Surprise vs Post announcement 2-day returns</em></p>
+</div>
 
 #### Macroeconomic Analysis
 
@@ -99,7 +104,10 @@ Each company showed unique macro sensitivity profiles:
 
 Revenue growth consistently showed stronger impact on returns than macroeconomic factors for these high-growth tech companies.
 
-![image](https://github.com/user-attachments/assets/e39cf5b8-40bc-4a7e-8eeb-88b00dc79f0f)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e39cf5b8-40bc-4a7e-8eeb-88b00dc79f0f" width="100%"/>
+  <p><em>Combined Correlation Heatmap - Returns vs Revenue and Macro factors</em></p>
+</div>
 
 #### Sentiment Analysis
 
@@ -113,8 +121,15 @@ News sentiment analysis revealed distinct patterns:
 
 Pre-earnings sentiment shows consistent optimistic bias with post-announcement sentiment typically declining.
 
-![image](https://github.com/user-attachments/assets/e07f3ac3-7384-4015-8b07-8a0c00556073)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e07f3ac3-7384-4015-8b07-8a0c00556073" width="100%"/>
+  <p><em>Example of Event Study Analysis chart - Apple for Stock sentiment</em></p>
+</div>
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6e251f3f-b42d-4d4f-a010-e45109d17e88" width="100%"/>
+  <p><em>Sentiment and Stock-price Trend around Earnings Announcements</em></p>
+</div>
 
 #### Trading Strategy Performance
 
