@@ -47,10 +47,10 @@ The analysis addressed key business needs:
 
 | Data Category | Source | Time Period | Key Metrics |
 |---------------|--------|-------------|------------|
-| Stock Price Data | Yahoo Finance API | 2000-2024 | OHLCV (Open, High, Low, Close, Volume) |
-| Financial Metrics | Financial Modeling Prep (FMP API) | 2000-2024 | Earnings, Revenue, Key Financial Ratios |
-| Macroeconomic Indicators | Federal Reserve Economic Data (FRED API) | 2000-2024 | GDP, Inflation, Unemployment, Federal Debt, Treasury Yields |
-| News Sentiment | NY Times Articles (Vantage Data) | 2019-2024 | 1,423 articles after cleanup |
+| <b>Stock Price Data</b> | Yahoo Finance API | 2000-2024 | OHLCV (Open, High, Low, Close, Volume) |
+| <b>Financial Metrics</b> | Financial Modeling Prep (FMP API) | 2000-2024 | Earnings, Revenue, Key Financial Ratios |
+| <b>Macroeconomic Indicators</b> | Federal Reserve Economic Data (FRED API) | 2000-2024 | GDP, Inflation, Unemployment, Federal Debt, Treasury Yields |
+| <b>News Sentiment</b> | NY Times Articles (Client provided Data) | 2019-2024 | 1,423 articles after cleanup |
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/22065cf7-93c4-424f-8bd0-fd7c733a1e73" width="100%"/>
@@ -63,20 +63,20 @@ We created 90+ derived features across the following categories:
 
 | Feature Category | Examples |
 |------------------|----------|
-| Stock Metrics | Daily Returns, Balance of Power (BOP), Pre/Post Announcement Returns, Price Coefficient of Variation |
-| Financial Indicators | EPS Surprise, Revenue Surprise, Standardized Surprise Scores, Profit Margins, ROE, ROA |
-| Macro Indicators | GDP Growth Rates (QoQ/YoY), Federal Debt Change, CPI Changes, Treasury Yield Movements |
-| Temporal Features | TTM Metrics, QoQ Changes, YoY Growth Rates |
-| Sentiment Scores | FinBERT Composite Scores, Company/Macro Sentiment Classification |
+| <b>Stock Metrics</b> | Daily Returns, Balance of Power (BOP), Pre/Post Announcement Returns, Price Coefficient of Variation |
+| <b>Financial Indicators</b> | EPS Surprise, Revenue Surprise, Standardized Surprise Scores, Profit Margins, ROE, ROA |
+| <b>Macro Indicators</b> | GDP Growth Rates (QoQ/YoY), Federal Debt Change, CPI Changes, Treasury Yield Movements |
+| <b>Temporal Features</b> | TTM Metrics, QoQ Changes, YoY Growth Rates |
+| <b>Sentiment Scores</b> | FinBERT Composite Scores, Company/Macro Sentiment Classification |
 
 #### Analysis Components
 
 | Analysis Type | Key Methodologies | Analytical Techniques | Outcomes |
 |---------------|-------------------|------------------------|----------|
-| **Earnings Event Analysis** | • Event study framework<br>• Multiple return windows (1-5 days)<br>• Cross-sectional surprise analysis | • Winsorization of extreme values<br>• Segmentation by surprise direction<br>• Temporal decomposition (2000-2024) | • 2-3 day optimal reaction window<br>• ~0.3 correlation between EPS surprise and returns<br>• Surprise threshold identification |
-| **Macroeconomic Factor Analysis** | • Correlation heatmaps<br>• Time-series decomposition<br>• Multi-factor regression<br>• Company-specific profiling | • Rate-of-change calculations (QoQ, YoY)<br>• Rolling window correlations<br>• Comparative macro sensitivity analysis | • Unique company-macro sensitivity maps<br>• Identified key indicators by company<br>• Quantified revenue vs. macro impact |
-| **News Sentiment Analysis** | • NLP-based sentiment extraction<br>• Classification framework<br>• 5-day pre/post-publication windows | • FinBERT financial sentiment scoring<br>• Rule-based article categorization<br>• Sentiment-return correlation analysis | • Company-specific sentiment responses<br>• Negative news recovery patterns<br>• Pre/post-earnings sentiment drift detection |
-| **Trading Strategy Development** | • Signal classification (Buy/Sell/Hold)<br>• Random Forest ensemble modeling<br>• Multi-factor integration<br>• Backtesting framework | • Company-specific thresholds<br>• Hyperparameter optimization<br>• Feature importance ranking<br>• Performance metrics calculation | • 6.5-12.7% average return per trade<br>• 83-95% signal precision<br>• Realized cumulative returns >20x<br>• Feature importance hierarchies |
+| **Earnings Event Analysis** | • Event study framework<br>• Multiple return windows (1-5 days)<br>• Cross-sectional surprise analysis | • Winsorization of extreme values<br>• Segmentation by surprise direction<br>• Temporal decomposition (2000-2024) | • **2-3 day** optimal reaction window<br>• **~0.3** correlation between EPS surprise and returns<br>• Surprise threshold identification |
+| **Macroeconomic Factor Analysis** | • Correlation heatmaps<br>• Time-series decomposition<br>• Multi-factor regression<br>• Company-specific correlations | • Rate-of-change calculations (QoQ, YoY)<br>• Rolling window correlations<br>• Comparative macro sensitivity analysis | • Unique company-macro sensitivity maps<br>• Identified key indicators by company<br>• Quantified revenue vs. macro impact |
+| **News Sentiment Analysis** | • NLP-based sentiment extraction<br>• Rule-based article classification<br>• **5-day** pre/post-publication windows | • **FinBERT** financial sentiment scoring<br>• Publishing date Event-study • Sentiment-return correlation analysis | • Company-specific sentiment responses<br>• Negative news recovery patterns<br>• **Pre/post-earnings** sentiment **drift detection** |
+| **Trading Strategy Development** | • Signal classification (Buy/Sell/Hold)<br>• Random Forest ensemble modeling<br>• Multi-factor integration<br>• Backtesting framework | • Company-specific thresholds<br>• Hyperparameter optimization<br>• Feature importance ranking<br>• Performance metrics calculation | • **6.5-12.7% average return** per trade<br>• **83-95%** signal precision<br>• Realized cumulative returns **>20x**<br>• Feature importance hierarchies |
 
 
 ### 🗝️ Key Insights and Results
@@ -84,8 +84,8 @@ We created 90+ derived features across the following categories:
 #### Earnings Analysis
 
 - EPS Surprise positively correlates with post-announcement returns (correlation ~0.3)
-- Market reaction to surprises strongest within 2-3 days after announcement
-- Pre-announcement momentum (BOP) shows positive correlation with post-announcement returns
+- Market reaction to surprises **strongest within 2-3 days** after announcement
+- **Pre-announcement momentum** (BOP) shows positive correlation with post-announcement returns
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/2895f387-580a-4b58-862e-1cfa8cdfe2ac" width="100%"/>
@@ -98,11 +98,11 @@ Each company showed unique macro sensitivity profiles:
 
 | Company | Primary Macro Correlations |
 |---------|----------------------------|
-| Apple   | Federal Debt, Real GDP     |
-| Google  | Real GDP, CPI, Treasury Yields |
-| Nvidia  | Real GDP, Treasury Yields, Unemployment |
+| **Apple**   | Federal Debt, Real GDP     |
+| **Google**  | Real GDP, CPI, Treasury Yields |
+| **Nvidia**  | Real GDP, Treasury Yields, Unemployment |
 
-Revenue growth consistently showed stronger impact on returns than macroeconomic factors for these high-growth tech companies.
+**Revenue growth** consistently showed **stronger impact** on returns *than* **macroeconomic factors** for these high-growth tech companies.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/e39cf5b8-40bc-4a7e-8eeb-88b00dc79f0f" width="100%"/>
@@ -115,9 +115,9 @@ News sentiment analysis revealed distinct patterns:
 
 | Company | Sentiment Response Pattern |
 |---------|----------------------------|
-| Apple   | Recovers from negative news within 3 days; positive drift otherwise (~1% in 5 days) |
-| Google  | Most stable to sentiment (returns within 1% window); acts as safe-haven during macro uncertainty |
-| Nvidia  | Highest sentiment sensitivity (±2-3% fluctuations); strong positive reaction to macro negativity |
+| **Apple**   | Recovers from negative news within 3 days; positive drift otherwise (~1% in 5 days) |
+| **Google**  | Most stable to sentiment (returns within 1% window); acts as safe-haven during macro uncertainty |
+| **Nvidia**  | Highest sentiment sensitivity (±2-3% fluctuations); strong positive reaction to macro negativity |
 
 Pre-earnings sentiment shows consistent optimistic bias with post-announcement sentiment typically declining.
 
